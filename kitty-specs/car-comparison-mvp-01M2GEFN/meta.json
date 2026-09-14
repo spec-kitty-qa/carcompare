@@ -1,0 +1,17 @@
+{
+  "coordination_branch": "kitty/mission-car-comparison-mvp-01M2GEFN",
+  "created_at": "2026-09-14T17:12:24.215304+00:00",
+  "flattened": false,
+  "friendly_name": "Car comparison MVP",
+  "mid8": "01M2GEFN",
+  "mission_id": "01M2GEFNB6MKS90ES5MAJ97CBJ",
+  "mission_number": null,
+  "mission_slug": "car-comparison-mvp-01M2GEFN",
+  "mission_type": "software-dev",
+  "pr_bound": true,
+  "purpose_context": "CarCompare is a new website for comparing cars using externally sourced price, fuel economy, and feature information. The user selected a Go backend and htmx and wants lightweight implementation and governance. Discovery will establish the primary audience, market, comparison workflow, and data boundaries before substantive requirements are written.",
+  "purpose_tldr": "Build a lightweight car comparison website using Go and htmx with external price, fuel economy, and feature data.",
+  "slug": "car-comparison-mvp-01M2GEFN",
+  "target_branch": "feat/car-comparison-mvp",
+  "topology": "coord"
+}
