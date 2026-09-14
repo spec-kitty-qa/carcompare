@@ -1,0 +1,55 @@
+schema_version: "1.0.0"
+mission: software-dev
+profile: minimal
+answers:
+  project_intent: >-
+    Build a lightweight car comparison website for comparing price, fuel economy,
+    and features using externally sourced car data. Audience, market, and data
+    provider remain undecided; resolve those during feature discovery.
+  languages_frameworks: >-
+    Go backend with server-rendered HTML and htmx for interactive updates.
+    Prefer the Go standard library and minimal dependencies. Do not introduce
+    a separate SPA framework without explicit user approval.
+  testing_requirements: >-
+    Use Go's testing package and httptest for comparison logic, HTTP handlers,
+    and htmx fragments. Test provider failure, missing data, and incompatible
+    units with fixtures rather than requiring live provider access.
+  quality_gates: >-
+    Keep changes small and readable. Once Go code exists, require gofmt-clean
+    code, go test ./..., and go vet ./... before declaring implementation ready.
+    Check the affected browser flow for htmx or markup changes; report checks
+    that could not be performed. No arbitrary coverage percentage is imposed.
+  review_policy: >-
+    Review proportionately for comparison correctness, external-data handling,
+    and usable HTML. Record verification evidence and known limitations;
+    no mandatory multi-reviewer process for this lightweight project.
+  performance_targets: >-
+    Keep pages and dependencies small. External requests need bounded timeouts
+    and visible failure states. No numeric latency or traffic target has been
+    agreed; measure before introducing performance infrastructure.
+  deployment_constraints: >-
+    Hosting and deployment remain undecided. Investigate a suitable external
+    provider before integration, including coverage, licensing, attribution,
+    pricing, and rate limits. Keep provider credentials server-side and out of git.
+  documentation_policy: >-
+    Keep setup and test instructions concise. Document the selected provider,
+    source attribution, retrieval freshness, and known limitations. Identify
+    comparable vehicle variants, price currencies and basis, fuel-economy units
+    and test cycles; distinguish unknown features from absent features.
+  risk_boundaries: >-
+    Do not invent missing values or present stale data as current. Preserve
+    source and retrieval timestamps and make unavailable or stale data visible.
+    Do not imply incompatible currencies, price bases, or fuel-economy test
+    cycles are directly comparable. Use external data only under permitted terms.
+  amendment_process: >-
+    Update interview answers, structured charter policy, and the concise
+    companion together when the user changes direction. Provider selection
+    and other open decisions belong to later discovery, not assumed commitments.
+  exception_policy: >-
+    Explain a necessary policy exception and obtain user approval before taking
+    it. Report blocked verification honestly instead of silently bypassing it.
+selected_paradigms: []
+selected_directives: []
+available_tools:
+  - git
+  - spec-kitty
